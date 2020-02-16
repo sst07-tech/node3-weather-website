@@ -32,7 +32,7 @@ weatherForm.addEventListener('submit',(event) => {
                 messageOne.textContent = data.error;
             }else{
                 console.log(data.address);
-                messageTwo.textContent = `It is currently ${data.temperature} degrees out. There is a ${data.forecast} chance of rain.`;
+                messageTwo.textContent = `It is currently ${data.temperature} degrees out. Overall forecast is ${data.forecast}.`;
                 messageOne.textContent = data.address;
             }
         }) 

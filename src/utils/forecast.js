@@ -13,10 +13,10 @@ const weather = (url, callback) => {
             // console.log(response);
             //Since we have used json: true above. We don't have to parse the body explicitly in JSON Object.
             // const data = JSON.parse(body);
-            console.log(body.currently);
+            console.log("Body contains "+JSON.stringify(body));
             //console.log(response.statusCode);
 
-            console.log(`It is currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipIntensity} chance of rain.`);
+            console.log(`It is currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipIntensity} chance of rain. Overall the forecast is ${body.currently.summary}`);
             callback(undefined,body);
         }
     })
