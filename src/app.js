@@ -18,6 +18,9 @@ console.log(__filename);
 
 const app = express();
 
+// Set port for deployment in Heroku. Port value will be define as environment variable.
+const port = process.env.PORT || 3000;
+
 //app.com
 //app.com/help
 //app.com/about
@@ -150,6 +153,6 @@ app.get('*',(req, res) => {
     });
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port '+port);
 });
